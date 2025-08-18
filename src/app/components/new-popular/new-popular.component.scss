@@ -1,0 +1,177 @@
+@import "../../../styles.scss";
+.popular {
+  padding: 30px 0px 30px 0px;
+
+  &-container {
+    position: relative;
+  }
+
+  &-slide {
+    &__left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    &__right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px 30px 0px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 33.89px;
+  }
+
+  &__more {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: $yellowColor;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 310px;
+    padding: 24px;
+    font-weight: 500;
+    line-height: 19.36px;
+    box-shadow: 0px 20px 50px 0px #12112714;
+    margin: 0 auto;
+  }
+}
+.popular-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 25px;
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 10px 0px;
+  }
+
+  &__discount {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color: $discountColor;
+    color: $textColor;
+    padding: 10px 20px;
+    border-radius: 60px;
+    display: none;
+    &.discount {
+      display: block;
+    }
+  }
+
+  &__new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    background-color: $newColor;
+    border-radius: 60px;
+    color: $textColor;
+    display: none;
+    &.new {
+      display: block;
+    }
+  }
+
+  &__matked {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+  }
+
+  &__price-title {
+    display: flex;
+    flex-direction: column;
+    .popular-card__unit {
+      color: #a1a0a0;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    align-items: end;
+    column-gap: 15px;
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+  }
+
+  &__quantitys {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__quantity {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__quantity-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  &__quantity-title {
+    display: block;
+    min-width: 100%;
+  }
+
+  &__to-cart {
+    border: 1px solid $yellowColor;
+    border-radius: 54px;
+    padding: 14px 20px;
+  }
+}

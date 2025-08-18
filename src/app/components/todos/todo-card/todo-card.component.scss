@@ -1,0 +1,46 @@
+@import "../../../../styles.scss";
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0;
+  height: rem(210);
+  width: rem(250);
+  gap: rem(10);
+  border: 1px solid black;
+  border-radius: rem(10);
+  padding: rem(5);
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: rem(5);
+  }
+
+  &__task {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    line-height: rem(20);
+  }
+
+  &__user {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__button {
+    color: #fff;
+    font-weight: 700;
+    border-radius: rem(10);
+    padding: rem(5) 0;
+    width: rem(95);
+    &._del {
+      background-color: #ea3f3f;
+    }
+    &._edit {
+      background-color: green;
+    }
+  }
+}
